@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/user/mojeid', (req, res) => {
+app.get('/user/:id', (req, res) => {
     const { id } = req.params;
     res.status(200).send({
         msg: "RunTest1: GET http://127.0.0.1:3000/user/mojeid",
@@ -22,7 +22,7 @@ app.get('/article/java/oop', (req, res) => {
     });
 });
 
-app.get('/comment/ixd222', (req, res) => {
+app.get('/comment/:id', (req, res) => {
     const { id } = req.params;
     res.status(200).send({
         msg: "RunTest3: GET http://127.0.0.1:3000/comment/ixd222",
